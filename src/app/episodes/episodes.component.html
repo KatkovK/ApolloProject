@@ -1,0 +1,16 @@
+<dx-data-grid id="gridContainer" [dataSource]="dataSource" [showBorders]="true">
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]" [showInfo]="true">
+    </dxo-pager>
+
+    <dxi-column dataField="id"></dxi-column>
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="air_date"></dxi-column>
+    <dxi-column dataField="episode"></dxi-column>
+    <dxi-column dataField="characters.length"></dxi-column>
+
+    <dxi-column type="buttons">
+        <dxi-button [onClick]="okClicked" [visible]="isCancelButtonVisible" text="Details">
+        </dxi-button>
+    </dxi-column>
+</dx-data-grid>
